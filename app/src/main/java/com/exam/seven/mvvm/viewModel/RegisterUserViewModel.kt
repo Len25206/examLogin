@@ -113,10 +113,11 @@ class RegisterUserViewModel @Inject constructor(
         state.userName.value = ""
         state.password.value = ""
         state.confirmPassword.value = ""
+        onRegisterSuccess(true)
         viewModelScope.launch {
             delay(2000)
             state.showDialog.value = false
-            onRegisterSuccess(true)
+         onRegisterSuccess(false)
         }
 
     }
